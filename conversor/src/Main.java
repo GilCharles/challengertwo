@@ -5,7 +5,11 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-        String nome = JOptionPane.showInputDialog("Olá, bem vindo ao conversor, qual é o seu nome ?");
+        Usuario nUsuario = new Usuario();
+
+        String nome = nUsuario.recebeNome();
+
+
 
         Object[] opcoes = {"Conversor de moedas", "Conversor de temperatura"};
         Object escolha = JOptionPane.showInputDialog(null, "Escolha uma opção " + nome + ":", "Título da janela", JOptionPane.QUESTION_MESSAGE, null, opcoes, opcoes[0]);
@@ -17,13 +21,22 @@ public class Main {
             Object escolhamoeda = JOptionPane.showInputDialog(null, "Qual moeda deseja converter ?", "Título da janela", JOptionPane.QUESTION_MESSAGE, null, moeda, moeda[0]);
 
             if (escolhamoeda == moeda[0]) {
-                String valorstr = JOptionPane.showInputDialog("Digite o valor que deseja converter:");
-                float valorfl = Float.parseFloat(valorstr);
 
-                // Atualizar para uma API
-
+                ConversorDaMoeda nValor = new ConversorDaMoeda();
+                nValor.recebeValor();
 
             }
+            if (escolhamoeda == moeda[1]) {
+
+
+
+                // atualizar API
+            }
+
+        if (escolha == opcoes[1]) {
+
+
+        }
 
         }
     }

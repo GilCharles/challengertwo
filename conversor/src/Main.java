@@ -22,9 +22,68 @@ public class Main {
 
                 // Atualizar para uma API
 
+<<<<<<< Updated upstream
 
+            }
+=======
+                ConversorDaMoeda nValor = new ConversorDaMoeda();
+                JOptionPane.showMessageDialog(null, nValor.recebeValorDolar());
+
+            }
+            if (escolhamoeda == moeda[1]) {
+
+                ConversorDaMoeda nValor = new ConversorDaMoeda();
+                JOptionPane.showMessageDialog(null, nValor.receberValorEuro());
             }
 
         }
+        if (escolha == opcoes[1]) {
+
+            Object[] escala = {"Celsius -> Kelvin", "Celsius -> Fahrenheit", "Kelvin -> Celsius", "Kelvin -> " +
+                    "Fahrenheit", "Fahrenheit -> Celsius", "Fahrenheit -> Kelvin" };
+            Object escolhaescala = JOptionPane.showInputDialog(null, "Qual escala de temperatura você quer usar", "T" +
+                    "ítulo da janela", JOptionPane.QUESTION_MESSAGE, null, escala, escala[0]);
+
+
+            if (escolhaescala == escala[0]) {
+
+                ConversorTemperatura nValor = new ConversorTemperatura();
+                JOptionPane.showMessageDialog(null, nValor.celsiusKelvin());
+            }
+
+            if (escolhaescala == escala[1]){
+
+                ConversorTemperatura nValor = new ConversorTemperatura();
+                JOptionPane.showMessageDialog(null, nValor.celsiusFahrenheit());
+            }
+
+            if (escolhaescala == escala[2]){
+
+                ConversorTemperatura nValor = new ConversorTemperatura();
+                JOptionPane.showMessageDialog(null, nValor.kelvinCelsius());
+            }
+
+            if (escolhaescala == escala[3]){
+
+                ConversorTemperatura nValor = new ConversorTemperatura();
+                JOptionPane.showMessageDialog(null, nValor.kelvinFahrenheit());
+            }
+
+            if (escolhaescala == escala[4]) {
+
+                ConversorTemperatura nValor = new ConversorTemperatura();
+                JOptionPane.showMessageDialog(null, nValor.fahrenheitCelsius());
+            }
+
+            if (escolhaescala == escala[5]) {
+
+                ConversorTemperatura nValor = new ConversorTemperatura();
+                JOptionPane.showMessageDialog(null, nValor.fahrenheitKelvin());
+            }
+
+
+        }
+>>>>>>> Stashed changes
+
     }
 }
